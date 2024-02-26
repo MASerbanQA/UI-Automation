@@ -2,7 +2,9 @@ import { onDatepickerPage } from "../../support/pageObjescts/datepickerPage"
 import { onDialogPage } from "../../support/pageObjescts/dialogPage"
 import { onFormLayoutsPage } from "../../support/pageObjescts/formLayoutsPage"
 import { navigateTo } from "../../support/pageObjescts/navigationPage"
+import { onPopoverPage } from "../../support/pageObjescts/popoverPage"
 import { onStepperPage } from "../../support/pageObjescts/stepperPage"
+import { onToastrPage } from "../../support/pageObjescts/toastrPage"
 import { onWindowPage } from "../../support/pageObjescts/windowPage"
 
 describe('Test components of each page in the application',()=>{
@@ -49,6 +51,21 @@ describe('Test components of each page in the application',()=>{
         navigateTo.modalAndOverlays('Window')
         onWindowPage.windowWithForm('Testing','Testing with Cypress')
 
+
+
+    })
+
+    it('Test the popover with tabs component',()=>{
+
+        navigateTo.modalAndOverlays('Popover')
+        onPopoverPage.popoverWithTabs()
+
+
+    })
+
+    it('Test all types of toasts in the Toastr page',()=>{
+        navigateTo.modalAndOverlays('Toastr')
+        onToastrPage.testTypesOfToast()
 
 
     })
