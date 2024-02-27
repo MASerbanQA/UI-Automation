@@ -3,6 +3,7 @@ import { onDialogPage } from "../../support/pageObjescts/dialogPage"
 import { onFormLayoutsPage } from "../../support/pageObjescts/formLayoutsPage"
 import { navigateTo } from "../../support/pageObjescts/navigationPage"
 import { onPopoverPage } from "../../support/pageObjescts/popoverPage"
+import { onSmartTablePage } from "../../support/pageObjescts/smartTablePage"
 import { onStepperPage } from "../../support/pageObjescts/stepperPage"
 import { onToastrPage } from "../../support/pageObjescts/toastrPage"
 import { onWindowPage } from "../../support/pageObjescts/windowPage"
@@ -66,6 +67,14 @@ describe('Test components of each page in the application',()=>{
     it('Test all types of toasts in the Toastr page',()=>{
         navigateTo.modalAndOverlays('Toastr')
         onToastrPage.testTypesOfToast()
+
+
+    })
+
+    it('Add user in the smart table',()=>{
+        navigateTo.tablesAndData('Smart Table')
+        onSmartTablePage.addNewUserInTable()
+        
 
 
     })
