@@ -79,4 +79,15 @@ describe('Test components of each page in the application',()=>{
 
     })
 
+    it('Edit existing user details',()=>{
+        navigateTo.tablesAndData('Smart Table')
+        onSmartTablePage.editExistingUserDetails()  
+
+
+    })
+    it.only('Testing the filter component of the Smart Table',()=>{
+        navigateTo.tablesAndData('Smart Table')
+        onSmartTablePage.filterById()
+    })
+
 })
