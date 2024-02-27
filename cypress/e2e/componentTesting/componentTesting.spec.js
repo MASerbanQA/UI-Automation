@@ -85,7 +85,7 @@ describe('Test components of each page in the application',()=>{
 
 
     })
-    it.only('Testing the filter component of the Smart Table',()=>{
+    it('Testing the filter component of the Smart Table',()=>{
         navigateTo.tablesAndData('Smart Table')
         onSmartTablePage.filterById()
     })
